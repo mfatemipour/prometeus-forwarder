@@ -12,7 +12,7 @@ env:
     - secure: Sj92WV0c4JGWRp3jsOeB2cXEykvS2olfg6ET6g9D081+Xa+QIpc1dC9bGPe7Ff33qgoCMRBhW/PqJbG/cMFbeY2ELCIIpMxf7a9mIzqixxkhd/38hJjvRjwsYRdl4qL507UFr6el+Uc1pP8ZsqxQ7oOIYhBLwx4U+mWWBU4WFFEkREKO3Xws3UlxTzbW0kdUnx+NrBHlVdqRFbPUdYnAHp0nGRrd4gASh+iRvCYBP0cdk9J0OItdi+FjaGf+uR2xace2Wo05Q/X/IvREEmDyGB9kFeptVH6Etsox28PX2ucyBq++n8we3RlTEkXyCMMw+qipxT0uHEG0HEKDbX5ECD2UyRYZCMpvLNN6HuwZbf5x9IsDTeGV04XMiCXBK8DBhvC0QKzHlr87y8aBOEFHBVEOpsJDRgTs9eJhyNYSH2iEiYpToXOfbdLjR7M5bKADpYvKYkG6wddaPMMtgy2E1BrZlW/8id4x5t6THBO0o30SkBDQdplRMVXZvlhSri9SPBIDi0zPlJYXEtjGHlZBkwBUI3zODCD7b7uvFdCL5rmAdAn2c9uGrqgGhSIMsdnRDtrU1a6ZBOtCnRNgNzvqLdAZ5tSohxYfY5v9/5kh2NltXw8HBMKFzBfcB+i8dH7wbgDGslvXMy8AzPWmVEaLjz7rtsttdhhKP3hWJ05j67k=
 
 script:
-  - go test ./...
+  # - go test ./...
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t mfatemipour/prometheus-forwarder:v1.0.0 .
   - docker push mfatemipour/prometheus-forwarder:v1.0.0
