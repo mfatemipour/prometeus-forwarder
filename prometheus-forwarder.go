@@ -19,7 +19,7 @@ import (
 )
 
 // will be used by govvv
-var GitCommit, GitState, Version string
+var Version string
 
 func handle_counter_metric(element *io_prometheus_client.MetricFamily, labels []string, pusher *push.Pusher) *push.Pusher {
 	if labels == nil {

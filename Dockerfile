@@ -7,8 +7,8 @@ WORKDIR /app
 RUN go get github.com/ahmetb/govvv
 RUN go get -d -v ./...
 
-RUN govvv build .
+RUN go build -ldflags "-X main.Version=v1.0.0"
 
 EXPOSE 8080
 
-ENTRYPOINT [ "/app/prometheus-forwarder" ]
+# ENTRYPOINT [ "/app/prometheus-forwarder" ]
